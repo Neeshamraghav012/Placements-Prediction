@@ -14,22 +14,22 @@ classifier = pickle.load(pickle_in)
 # add title to your app
 st.title("Know-Your-Placements")
 
-import ssl
-from pyngrok import ngrok, conf, installer
+#import ssl
+#from pyngrok import ngrok, conf, installer
 
-pyngrok_config = conf.get_default()
+#pyngrok_config = conf.get_default()
 
-if not os.path.exists(pyngrok_config.ngrok_path):
+#if not os.path.exists(pyngrok_config.ngrok_path):
 
-    myssl = ssl.create_default_context();
-    myssl.check_hostname=False
-    myssl.verify_mode=ssl.CERT_NONE
-    installer.install_ngrok(pyngrok_config.ngrok_path, context = myssl)
+    #myssl = ssl.create_default_context();
+    #myssl.check_hostname=False
+    #myssl.verify_mode=ssl.CERT_NONE
+    #installer.install_ngrok(pyngrok_config.ngrok_path, context = myssl)
 
-public_url = ngrok.connect(8501).public_url
+#public_url = ngrok.connect(8501).public_url
 
 
-print(public_url)
+#print(public_url)
 
 
 def prediction(Age, CGPA, Hostel, Gender, HistoryOfBacklogs, Internships):
@@ -67,6 +67,14 @@ def prediction(Age, CGPA, Hostel, Gender, HistoryOfBacklogs, Internships):
 	return ans
 
 #print(prediction(19, 5, 'No', 'Male', 'No', 0))
+
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
 
 
