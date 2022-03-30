@@ -1,11 +1,8 @@
 
-
-# myFirstStreamlitApp.py
-  
-#import the library
+ #import the library
 import streamlit as st
 import pickle
-from pyngrok import ngrok
+#from pyngrok import ngrok
 import os
 
 pickle_in = open('classifier.pkl', 'rb') 
@@ -68,13 +65,7 @@ def prediction(Age, CGPA, Hostel, Gender, HistoryOfBacklogs, Internships):
 
 #print(prediction(19, 5, 'No', 'Male', 'No', 0))
 
-hide_streamlit_style = """
-            <style>
-            #MainMenu {visibility: hidden;}
-            footer {visibility: hidden;}
-            </style>
-            """
-st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
 
 
 
