@@ -10,6 +10,10 @@ classifier = pickle.load(pickle_in)
   
 # add title to your app
 st.title("Know-Your-Placements")
+st.markdown("Designed by **Neesham**")
+
+st.subheader("Fork Me!")
+st.header("https://github.com/Neeshamraghav012/Placements-Prediction")
 
 #import ssl
 #from pyngrok import ngrok, conf, installer
@@ -65,7 +69,13 @@ def prediction(Age, CGPA, Hostel, Gender, HistoryOfBacklogs, Internships):
 
 #print(prediction(19, 5, 'No', 'Male', 'No', 0))
 
-
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
 
 
 
