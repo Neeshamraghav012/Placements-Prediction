@@ -9,28 +9,12 @@ pickle_in = open('classifier.pkl', 'rb')
 classifier = pickle.load(pickle_in)
   
 # add title to your app
-st.title("Know-Your-Placements")
-st.markdown("Designed by **Neesham**")
+st.title("Know-Your-Internship-chances")
+#st.markdown("Designed by **Neesham**")
 
-st.subheader("Fork Me!")
-st.header("https://github.com/Neeshamraghav012/Placements-Prediction")
+#st.subheader("Fork Me!")
+#st.header("https://github.com/Neeshamraghav012/Placements-Prediction")
 
-#import ssl
-#from pyngrok import ngrok, conf, installer
-
-#pyngrok_config = conf.get_default()
-
-#if not os.path.exists(pyngrok_config.ngrok_path):
-
-    #myssl = ssl.create_default_context();
-    #myssl.check_hostname=False
-    #myssl.verify_mode=ssl.CERT_NONE
-    #installer.install_ngrok(pyngrok_config.ngrok_path, context = myssl)
-
-#public_url = ngrok.connect(8501).public_url
-
-
-#print(public_url)
 
 
 def prediction(Age, CGPA, Hostel, Gender, HistoryOfBacklogs, Internships):
@@ -83,15 +67,15 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 Gender = st.selectbox('Gender', ("Male","Female"))
 Age = st.selectbox('Age', [17, 18, 19, 20, 21, 22, 23, 24])
 CGPA = st.selectbox('CGPA', [5, 6, 7, 8, 9, 10])
-Hostel = st.selectbox('Hostel', ["Yes", "No"])
+#Hostel = st.selectbox('Hostel', ["Yes", "No"])
 HistoryOfBacklogs = st.selectbox('Any Backlogs?', ['Yes', 'No'])
 Internships = st.selectbox('Internships', [0, 1, 2, 3])
 
 if st.button("Predict"): 
-    result =  prediction(Age, CGPA, Hostel, Gender, HistoryOfBacklogs, Internships)
+    result =  prediction(Age, CGPA, 0, Gender, HistoryOfBacklogs, Internships)
 
     if result == 1:
-    	st.success("Yeah Sure! You Will be Placed.")
+    	st.success("Yeah Sure! You Will Get Internship.")
 
     else:
     	st.warning("Oops, Not Yet.")
