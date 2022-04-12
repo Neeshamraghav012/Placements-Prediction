@@ -32,11 +32,6 @@ def prediction(Age, CGPA, Hostel, Gender, HistoryOfBacklogs, Internships):
 	elif (HistoryOfBacklogs == 'No'):
 		HistoryOfBacklogs = 0
 
-	if (Hostel == 'Yes'):
-		Hostel = 1 
-
-	elif (Hostel == 'No'):
-		Hostel = 0
 
 	ans = ""
 	predict = classifier.predict([[Age, Gender, Internships, CGPA, Hostel, HistoryOfBacklogs]])
