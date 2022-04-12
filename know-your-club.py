@@ -9,7 +9,7 @@ pickle_in = open('classifier.pkl', 'rb')
 classifier = pickle.load(pickle_in)
   
 # add title to your app
-st.title("Know-Your-Internship-chances")
+st.title("Internship Predictor")
 #st.markdown("Designed by **Neesham**")
 
 #st.subheader("Fork Me!")
