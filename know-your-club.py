@@ -80,4 +80,4 @@ if st.button("Predict"):
     else:
     	st.warning("Oops, Not Yet.")
 
-st.write("Go Back to Hire Easi [link](https://hire-easy.herokuapp.com/)")
+st.write("Go Back to [Hire Easi](https://hire-easy.herokuapp.com/)")
