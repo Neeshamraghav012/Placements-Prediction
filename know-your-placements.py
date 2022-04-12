@@ -60,10 +60,15 @@ st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 
 Gender = st.selectbox('Gender', ("Male","Female"))
+
 Age = st.selectbox('Age', [17, 18, 19, 20, 21, 22, 23, 24])
+
 CGPA = st.selectbox('CGPA', [5, 6, 7, 8, 9, 10])
+
 #Hostel = st.selectbox('Hostel', ["Yes", "No"])
+
 HistoryOfBacklogs = st.selectbox('Any Backlogs?', ['Yes', 'No'])
+
 Internships = st.selectbox('Internships', [0, 1, 2, 3])
 
 if st.button("Predict"): 
